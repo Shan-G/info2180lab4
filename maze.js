@@ -3,7 +3,7 @@ var loser = false;  // whether the user has hit a wall
 window.onload = function() 
 {
     $("start").onclick = startClick;
-    $("start").mouseout = cheater;
+    $("maze").mouseout = cheatCheck;
     $("end").onmouseover = overEnd;
     
     var boundaries = $$("div#maze div.boundary");
@@ -52,10 +52,6 @@ function overEnd()
 function cheatCheck()
 {
     if (startcount < 1)
-    {
-        startcount++;
-    }
-    else
     {
         loser = true;
         overBoundary();
