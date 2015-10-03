@@ -11,7 +11,7 @@ window.onload = function()
         boundaries[i].onmouseover = overBoundary;
     }
     
-    $("div3maze div.boundary").mouseout = cheatCheck;
+    $("div3maze div.boundary").mouseon = cheatCheck;
 };
 
 function overBoundary() 
