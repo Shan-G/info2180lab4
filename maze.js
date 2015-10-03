@@ -1,10 +1,9 @@
 "use strict";
 var loser = false;  // whether the user has hit a wall
-var startcount = 0;
 window.onload = function() 
 {
     $("start").onclick = startClick;
-    $("start").mouseout = cheater;
+    $("maze").mouseout = cheater;
     $("end").onmouseover = overEnd;
     
     var boundaries = $$("div#maze div.boundary");
@@ -13,20 +12,6 @@ window.onload = function()
         boundaries[i].onmouseover = overBoundary;
     }
 };
-
-function cheatCheck()
-{
-    if (startcount < 1)
-    {
-        startcount++;
-    }
-    else
-    {
-        loser = true;
-        overBoundary();
-        cheater();
-    }
-}
 
 function overBoundary() 
 {
