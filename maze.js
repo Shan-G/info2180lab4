@@ -4,7 +4,7 @@ var startcount = 0;
 window.onload = function() 
 {
     $("start").onclick = startClick;
-    $("start").overBoundary = cheatCheck;
+    $("boundary").overBoundary = cheatCheck;
     $("end").onmouseover = overEnd;
     
     var boundaries = $$("div#maze div.boundary");
