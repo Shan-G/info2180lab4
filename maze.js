@@ -3,7 +3,6 @@ var loser = false;  // whether the user has hit a wall
 window.onload = function() 
 {
     $("start").onclick = startClick;
-    $("boundary").mouseout = cheatCheck;
     $("end").onmouseover = overEnd;
     
     var boundaries = $$("div#maze div.boundary");
@@ -11,6 +10,8 @@ window.onload = function()
     {
         boundaries[i].onmouseover = overBoundary;
     }
+    
+    $("div3maze div.boundary").mouseout = cheatCheck;
 };
 
 function overBoundary() 
